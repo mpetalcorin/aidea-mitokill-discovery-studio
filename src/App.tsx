@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 import {
   Activity,
@@ -15,7 +16,6 @@ import {
   HeartPulse,
   Layers3,
   Lightbulb,
-  LineChart as LineChartIcon,
   Microscope,
   Moon,
   Orbit,
@@ -24,12 +24,9 @@ import {
   Rocket,
   ShieldCheck,
   Sparkles,
-  Stethoscope,
   Sun,
   Target,
-  TestTube2,
   TimerReset,
-  TrendingUp,
   Users,
   Zap,
 } from "lucide-react";
@@ -826,7 +823,7 @@ export default function App() {
   );
 }
 
-function InfoCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
+function InfoCard({ icon, title, text }: { icon: ReactNode; title: string; text: string }) {
   return (
     <motion.div whileHover={{ y: -6 }} className="info-card">
       <div className="icon">{icon}</div>
@@ -881,7 +878,7 @@ function Metric({ label, value }: { label: string; value: number }) {
   );
 }
 
-function Gate({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
+function Gate({ icon, title, text }: { icon: ReactNode; title: string; text: string }) {
   return (
     <motion.div whileHover={{ scale: 1.03 }} className="gate">
       <div className="icon">{icon}</div>
@@ -922,7 +919,7 @@ function ExternalCard({
   title: string;
   text: string;
   href: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }) {
   return (
     <motion.a whileHover={{ y: -5 }} href={href} target="_blank" rel="noreferrer" className="external-card">
